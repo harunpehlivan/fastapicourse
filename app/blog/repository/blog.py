@@ -4,8 +4,7 @@ from fastapi import HTTPException, status
 
 
 def get_all(db: Session):
-    blogs = db.query(models.Blog).all()
-    return blogs
+    return db.query(models.Blog).all()
 
 
 def create(request: schemas.Blog, db: Session):
